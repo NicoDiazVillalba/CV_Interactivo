@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Díaz V.</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -15,18 +16,18 @@
 
                 <img src="perfil.jpg" alt="Foto de perfil de Nicolás Díaz" class="foto-perfil">
                 <div class="texto-inicial">
-
-                    <h1 class="Nombre">Nicolas Diaz Villalba</h1>
-                    <h3 class="Profesion">Estudiante Ingeniera de Sistemas | Analista de Siniestros | Administrador</h3>
-                    <ul>
-                        <li>Edad: 22 años</li>
-                        <li>Dirección: Carrera 3 # 52 - 10, Bogotá</li>
-                        <li>País: Colombia</li>
-                        <li>Teléfono: 3133510008</li>
-                        <li>Fecha nacimiento: 8 de octubre de 2002</li>
-                    </ul>
-
+                    <h1 class="nombre">Nicolás Díaz Villalba</h1>
+                    <h3 class="profesion">Estudiante de Ingeniería de Sistemas | Analista de Siniestros</h3>
+                    
+                    <div class="info-grid">
+                        <div class="dato"><strong>Edad:</strong></div> <div class="valor">22 años</div>
+                        <div class="dato"><strong>Dirección:</strong></div> <div class="valor">Carrera 3 # 52 - 10, Bogotá</div>
+                        <div class="dato"><strong>País:</strong></div> <div class="valor">Colombia</div>
+                        <div class="dato"><strong>Teléfono:</strong></div> <div class="valor"><a href="tel:+573133510008">313 351 0008</a></div>
+                        <div class="dato"><strong>Fecha de nacimiento:</strong></div> <div class="valor">8 de octubre de 2002</div>
+                    </div>
                 </div>
+            </div>
 
                 <div class="redes-sociales">
                     <ul class="redes-enlaces">
@@ -40,8 +41,10 @@
                 </div>
             </div>
 
-
+            
         </div>
+
+        <button id="btn-theme-toggle" class="btn-theme-toggle">Modo Oscuro</button>
 
     </header>
 
@@ -115,25 +118,73 @@
     
     </section>
 
+    
     <section id="habilidades" class="container">
         <h2>Habilidades</h2>
     
-        <ul class="lista-habilidades">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>MySQL</li>
-            <li>Java</li>
-            <li>Power BI </li>
-            <li>Python</li>
-            <li>Paquete Office</li>
-            <li>Git</li>
-            <li>Liderazgo</li>
-            <li>Trabajo en Equipo</li>
-            <li>Empatía</li>
-
-        </ul>
+        <div class="habilidades-grid">
+            <div class="habilidad">
+                <span>HTML</span>
+                <div class="barra"><div class="progreso" data-valor="90"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>CSS</span>
+                <div class="barra"><div class="progreso" data-valor="85"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>JavaScript</span>
+                <div class="barra"><div class="progreso" data-valor="75"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>MySQL</span>
+                <div class="barra"><div class="progreso" data-valor="80"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Java</span>
+                <div class="barra"><div class="progreso" data-valor="70"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Power BI</span>
+                <div class="barra"><div class="progreso" data-valor="75"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Python</span>
+                <div class="barra"><div class="progreso" data-valor="85"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Paquete Office</span>
+                <div class="barra"><div class="progreso" data-valor="90"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Git</span>
+                <div class="barra"><div class="progreso" data-valor="80"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Liderazgo</span>
+                <div class="barra"><div class="progreso" data-valor="85"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Trabajo en Equipo</span>
+                <div class="barra"><div class="progreso" data-valor="95"></div></div>
+            </div>
+    
+            <div class="habilidad">
+                <span>Empatía</span>
+                <div class="barra"><div class="progreso" data-valor="90"></div></div>
+            </div>
+        </div>
     </section>
+
 
     <section id="Certificaciones" class="container">
 
@@ -194,7 +245,7 @@
         
     </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
