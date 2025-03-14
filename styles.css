@@ -136,12 +136,15 @@ h3 {
 }
 
 /* Contenedores de cada sección */
-.item-educacion, .item-certificacion, .Funciones {
+.item-educacion, .item-certificacion,.Funciones {
     padding: 15px;
     background: #e3f2fd; /* Azul claro pastel */
     border-left: 4px solid #0f4c75; /* Azul profundo */
     margin-bottom: 15px;
+    color:#555;
 }
+
+
 
 /* Listas */
 ul {
@@ -182,14 +185,18 @@ p {
 
 footer {
    
-    background-color: #1b262c; /* Azul oscuro */
-    color: #bbe1fa; /* Celeste claro */
-    padding: 15px 0;
+    background: linear-gradient(135deg, #1b6a9e, #3282b8);
+    color: #fac1bb; /* Celeste claro */
+    padding: 2px 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%; /* Para que ocupe toda la pantalla */
+}
+
+.footer-text{
+    color:white;
 }
 
 .habilidades-grid {

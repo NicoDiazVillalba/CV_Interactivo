@@ -1,5 +1,5 @@
 //Lista habilidades
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const barras = document.querySelectorAll(".progreso");
 
     barras.forEach(barra => {
@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-$(document).ready(function() {
-    $('#btn-theme-toggle').click(function() {
+$(document).ready(function () {
+    $('#btn-theme-toggle').click(function () {
 
-        
+
         let isDark = $("body").hasClass("dark-theme");
 
         if (!isDark) {
@@ -56,8 +56,26 @@ $(document).ready(function() {
             });
 
             $("footer").css({
-                "background-color": "#0d1b2a",
+                "background": "linear-gradient(135deg, #0d1b2a, #1b263b)",
                 "color": "#57a5ff"
+            });
+
+            $(".footer-text").css({
+                "color": "#ffffff"
+            })
+
+            $("h3").css({
+                "color": "#ffffff"
+            })
+
+
+            $(".item-educacion, .item-certificacion, .Funciones").css({
+                "background": "#1b262c",
+                "color": "#ffffff"
+            });
+
+            $(".institucion, .Empresa").css({
+                "color": "#ffffff"
             });
 
             $(".habilidad").css({
@@ -73,10 +91,10 @@ $(document).ready(function() {
                 "background": "linear-gradient(90deg, #57a5ff, #1e88e5)"
             });
 
-            
+
             localStorage.setItem("theme", "dark");
 
-            
+
             $('#btn-theme-toggle').text("Pasar a Modo Claro");
 
         } else {
@@ -121,13 +139,30 @@ $(document).ready(function() {
             });
 
             $("footer").css({
-                "background-color": "#1b262c",
+                "background": "linear-gradient(135deg, #1b6a9e, #3282b8)",
                 "color": "#bbe1fa"
             });
+
+            $(".footer-text").css({
+                "color": "white"
+            })
 
             $(".habilidad").css({
                 "background": "#ffffff",
                 "color": "#333"
+            });
+
+            $("h3").css({
+                "color": "#1b262c"
+            })
+
+            $(".item-educacion, .item-certificacion, .Funciones").css({
+                "background": "#e3f2fd",
+                "color": "#555"
+            });
+
+            $(".institucion, .Empresa").css({
+                "color": "#555"
             });
 
             $(".barra").css({
