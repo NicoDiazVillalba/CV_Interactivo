@@ -1,3 +1,60 @@
-body{
-    color:green;
+.profile {
+    display: flex;  
+    align-items: center;  
+    gap: 20px;  
+    margin-bottom: 0;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.foto-perfil {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    
+}
+
+.descripcion {
+    max-width:750px;  
+    font-size: 18px;
+    margin-bottom: 5px; /* Reduce el espacio entre la descripción y las redes */
+
+}
+
+.texto-inicial {
+    max-width: 600px;
+}
+
+.redes-sociales {
+    background-color: #4e4b4b;
+    width: 100%;
+    position: relative;
+    bottom: 1px; 
+    left: 0;
+    padding: 10px 0;
+    margin-top: 10px; 
+}
+
+.redes-enlaces {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-enlaces li {
+    display: inline;
+}
+
+.redes-enlaces a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.redes-enlaces a:hover {
+    color: #f39c12; 
 }
