@@ -190,6 +190,24 @@ $(document).ready(function () {
     }
 });
 
+$(document).ready(function() {
+    var btnScrollTop = $('#btn-scroll-top');
+
+ 
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 200) {
+            btnScrollTop.addClass('show');
+        } else {
+            btnScrollTop.removeClass('show');
+        }
+    });
+
+  
+    btnScrollTop.click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+});
+
 
 
 
