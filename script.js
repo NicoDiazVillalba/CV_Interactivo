@@ -1,12 +1,24 @@
-//Lista habilidades
 document.addEventListener("DOMContentLoaded", function () {
-    const barras = document.querySelectorAll(".progreso");
+    const barras = document.querySelectorAll(".circular-progress");
 
     barras.forEach(barra => {
-        let valor = barra.getAttribute("data-valor");
-        barra.style.width = valor + "%";
+        let progressValue = barra.querySelector(".progress-value");
+        let progressStartValue = 0;
+        let progressEndValue = parseInt(barra.getAttribute("data-valor"));
+        let speed = 70; 
+
+        let progress = setInterval(() => {
+            progressStartValue++;
+            progressValue.textContent = `${progressStartValue}%`;
+            barra.style.background = `conic-gradient(#11e4cb ${progressStartValue * 3.6}deg, #ededed 0deg)`;
+
+            if (progressStartValue == progressEndValue) {
+                clearInterval(progress);
+            }
+        }, speed);
     });
 });
+
 
 $(document).ready(function () {
     $('#btn-theme-toggle').click(function () {
@@ -18,7 +30,8 @@ $(document).ready(function () {
             // Aplicar tema oscuro
             $("body").css({
                 "background-color": "#121212",
-                "color": "#e0e0e0"
+                "color": "#e0e0e0",
+                "transition":"background-color 0.3s ease-in-out"
             });
 
             $(".profile").css({
@@ -44,15 +57,15 @@ $(document).ready(function () {
             });
 
             $(".redes-sociales").css({
-                "background-color": "#252525"
+                "background": "linear-gradient(90deg, #0f4c75, #3282b8)"
             });
 
             $(".redes-enlaces a").css({
-                "color": "#d1d1d1"
+                "color": "#black"
             });
 
             $(".redes-enlaces a:hover").css({
-                "color": "#57a5ff"
+                "color": "#5fc1f1"
             });
 
             $("footer").css({
@@ -64,18 +77,21 @@ $(document).ready(function () {
                 "color": "#ffffff"
             })
 
+            $("h2").css({
+                "color":"#5fc1f1"
+            })
+
             $("h3").css({
                 "color": "#ffffff"
             })
 
-
             $(".item-educacion, .item-certificacion, .Funciones").css({
                 "background": "#1b262c",
-                "color": "#ffffff"
+                "color": "#bbbbbb"
             });
 
             $(".institucion, .Empresa").css({
-                "color": "#ffffff"
+                "color": "#bbbbbb"
             });
 
             $(".habilidad").css({
@@ -114,7 +130,7 @@ $(document).ready(function () {
             });
 
             $(".profesion").css({
-                "color": "#dbeafe"
+                "color": "#ffffff"
             });
 
             $(".descripcion").css({
@@ -127,7 +143,7 @@ $(document).ready(function () {
             });
 
             $(".redes-sociales").css({
-                "background-color": "#938686"
+                "background": "linear-gradient(135deg, #8bcfdb, #92eddb)"
             });
 
             $(".redes-enlaces a").css({
@@ -135,7 +151,7 @@ $(document).ready(function () {
             });
 
             $(".redes-enlaces a:hover").css({
-                "color": "#0f4c75"
+                "color": "#b53d0a"
             });
 
             $("footer").css({
@@ -151,6 +167,10 @@ $(document).ready(function () {
                 "background": "#ffffff",
                 "color": "#333"
             });
+
+            $("h2").css({
+                "color":"#0f4c75"
+            })
 
             $("h3").css({
                 "color": "#1b262c"
@@ -190,11 +210,11 @@ $(document).ready(function () {
     }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     var btnScrollTop = $('#btn-scroll-top');
 
- 
-    $(window).scroll(function() {
+
+    $(window).scroll(function () {
         if ($(window).scrollTop() > 200) {
             btnScrollTop.addClass('show');
         } else {
@@ -202,8 +222,8 @@ $(document).ready(function() {
         }
     });
 
-  
-    btnScrollTop.click(function() {
+
+    btnScrollTop.click(function () {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 });

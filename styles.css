@@ -2,7 +2,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #eef2f3;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+    
 }
+
+
 
 
 .profile {  
@@ -60,7 +65,7 @@ body {
 }
 
 .redes-sociales {
-    background-color: #938686;
+    background: linear-gradient(135deg, #8bcfdb, #92eddb);
     width: 100%;
     position: relative;
     bottom: 1px; 
@@ -91,7 +96,7 @@ body {
 }
 
 .redes-enlaces a:hover {
-    color: #0f4c75;
+    color: #b53d0a;
 }
 
 .descripcion {
@@ -222,8 +227,8 @@ footer {
 
 
 .habilidad {
-    color: #ffeb99; /* Amarillo suave */
-    background: #1b262c; /* Azul oscuro */
+    color: #ffeb99;
+    background: linear-gradient(135deg, #9a9cc9, #6ac8df);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -234,6 +239,34 @@ footer {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+}
+
+.circular-progress {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#0f7558 0deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f4c75;
 }
 
 .barra {
