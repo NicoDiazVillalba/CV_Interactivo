@@ -7,17 +7,14 @@ body {
     
 }
 
-
 .dark-theme {
     background-color: #121212;
     color: #e0e0e0;
 }
 
-
 .dark-theme .profile {
     background: linear-gradient(135deg, #0d1b2a, #1b263b);
 }
-
 
 .dark-theme .footer-text,
 .dark-theme h3 {
@@ -88,7 +85,6 @@ body, .container, .profile, .redes-sociales, .habilidad {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     
 }
-
 
 .texto-inicial {
     max-width: 500px; 
@@ -165,7 +161,6 @@ body, .container, .profile, .redes-sociales, .habilidad {
 
 }
 
-
 .container {
     background: #ffffff; 
     border-bottom: 2px solid #0f4c75; 
@@ -174,7 +169,6 @@ body, .container, .profile, .redes-sociales, .habilidad {
     background-color: #ffffff;
     border-bottom: 2px solid #007BFF; 
 }
-
 
 h2 {
     font-size: 24px;
