@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    $('#btn-theme-toggle').click(function () {
+        $('body').toggleClass('dark-theme');
+
+    });
+
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const barras = document.querySelectorAll(".circular-progress");
 
@@ -5,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let progressValue = barra.querySelector(".progress-value");
         let progressStartValue = 0;
         let progressEndValue = parseInt(barra.getAttribute("data-valor"));
-        let speed = 70; 
+        let speed = 70;
 
         let progress = setInterval(() => {
             progressStartValue++;
@@ -21,196 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function () {
-    $('#btn-theme-toggle').click(function () {
-
-
-        let isDark = $("body").hasClass("dark-theme");
-
-        if (!isDark) {
-            // Aplicar tema oscuro
-            $("body").css({
-                "background-color": "#121212",
-                "color": "#e0e0e0",
-                "transition":"background-color 0.3s ease-in-out"
-            });
-
-            $(".profile").css({
-                "background": "linear-gradient(135deg, #0d1b2a, #1b263b)",
-                "color": "#ffffff"
-            });
-
-            $(".nombre").css({
-                "color": "#ffffff"
-            });
-
-            $(".profesion").css({
-                "color": "#bbbbbb"
-            });
-
-            $(".descripcion").css({
-                "color": "#bbbbbb"
-            });
-
-            $(".container").css({
-                "background": "#1e1e1e",
-                "border-bottom": "2px solid #0f4c75"
-            });
-
-            $(".redes-sociales").css({
-                "background": "linear-gradient(90deg, #0f4c75, #3282b8)"
-            });
-
-            $(".redes-enlaces a").css({
-                "color": "#black"
-            });
-
-            $(".redes-enlaces a:hover").css({
-                "color": "#5fc1f1"
-            });
-
-            $("footer").css({
-                "background": "linear-gradient(135deg, #0d1b2a, #1b263b)",
-                "color": "#57a5ff"
-            });
-
-            $(".footer-text").css({
-                "color": "#ffffff"
-            })
-
-            $("h2").css({
-                "color":"#5fc1f1"
-            })
-
-            $("h3").css({
-                "color": "#ffffff"
-            })
-
-            $(".item-educacion, .item-certificacion, .Funciones").css({
-                "background": "#1b262c",
-                "color": "#bbbbbb"
-            });
-
-            $(".institucion, .Empresa").css({
-                "color": "#bbbbbb"
-            });
-
-            $(".habilidad").css({
-                "background": "#1b262c",
-                "color": "#ffeb99"
-            });
-
-            $(".barra").css({
-                "background": "#333333"
-            });
-
-            $(".progreso").css({
-                "background": "linear-gradient(90deg, #57a5ff, #1e88e5)"
-            });
-
-
-            localStorage.setItem("theme", "dark");
-
-
-            $('#btn-theme-toggle').text("Pasar a Modo Claro");
-
-        } else {
-            // Volver a tema claro
-            $("body").css({
-                "background-color": "#eef2f3",
-                "color": "#333"
-            });
-
-            $(".profile").css({
-                "background": "linear-gradient(135deg, #1b6a9e, #3282b8)",
-                "color": "white"
-            });
-
-            $(".nombre").css({
-                "color": "#fff"
-            });
-
-            $(".profesion").css({
-                "color": "#ffffff"
-            });
-
-            $(".descripcion").css({
-                "color": "#666666"
-            });
-
-            $(".container").css({
-                "background": "#ffffff",
-                "border-bottom": "2px solid #0f4c75"
-            });
-
-            $(".redes-sociales").css({
-                "background": "linear-gradient(135deg, #8bcfdb, #92eddb)"
-            });
-
-            $(".redes-enlaces a").css({
-                "color": "#000000"
-            });
-
-            $(".redes-enlaces a:hover").css({
-                "color": "#b53d0a"
-            });
-
-            $("footer").css({
-                "background": "linear-gradient(135deg, #1b6a9e, #3282b8)",
-                "color": "#bbe1fa"
-            });
-
-            $(".footer-text").css({
-                "color": "white"
-            })
-
-            $(".habilidad").css({
-                "background": "#ffffff",
-                "color": "#333"
-            });
-
-            $("h2").css({
-                "color":"#0f4c75"
-            })
-
-            $("h3").css({
-                "color": "#1b262c"
-            })
-
-            $(".item-educacion, .item-certificacion, .Funciones").css({
-                "background": "#e3f2fd",
-                "color": "#555"
-            });
-
-            $(".institucion, .Empresa").css({
-                "color": "#555"
-            });
-
-            $(".barra").css({
-                "background": "#cfd8dc"
-            });
-
-            $(".progreso").css({
-                "background": "linear-gradient(90deg, #0f4c75, #3282b8)"
-            });
-
-            // Guardar preferencia en localStorage
-            localStorage.setItem("theme", "light");
-
-            // Cambiar el texto del botón
-            $('#btn-theme-toggle').text("Pasar a Modo Oscuro");
-        }
-
-        // Alternar clase en body para mantener consistencia
-        $("body").toggleClass("dark-theme");
-    });
-
-    // Aplicar el tema guardado al cargar la página
-    if (localStorage.getItem("theme") === "dark") {
-        $("#btn-theme-toggle").trigger("click");
-    }
-});
-
-$(document).ready(function () {
     var btnScrollTop = $('#btn-scroll-top');
 
 
@@ -221,7 +39,6 @@ $(document).ready(function () {
             btnScrollTop.removeClass('show');
         }
     });
-
 
     btnScrollTop.click(function () {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
